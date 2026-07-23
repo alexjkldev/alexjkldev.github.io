@@ -13,6 +13,7 @@
     --card-bg: #ffffff;
     --border: #ece1f7;
     --shadow: 0 4px 16px rgba(90, 40, 150, 0.08);
+    --apple: #000;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -22,6 +23,7 @@
       --card-bg: #221c2e;
       --border: #362a45;
       --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      --apple: #fff;
     }
   }
   * { box-sizing: border-box; }
@@ -72,16 +74,14 @@
     .grid { grid-template-columns: 1fr; }
   }
   .app {
+    display: flex;
+    flex-direction: column;
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 20px;
     box-shadow: var(--shadow);
     border-top: 4px solid var(--accent, #7b5bff);
-    transition: transform 0.15s ease;
-  }
-  .app:hover {
-    transform: translateY(-3px);
   }
   .app-head {
     display: flex;
@@ -109,11 +109,24 @@
     flex-wrap: wrap;
     gap: 6px 14px;
     font-size: 13px;
+    margin-top: auto;
+    padding-top: 4px;
   }
   .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     color: var(--accent, #7b5bff);
     text-decoration: none;
     font-weight: 600;
+  }
+  .links svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+  .icon-apple {
+    fill: var(--apple);
   }
   .links a:hover {
     text-decoration: underline;
@@ -155,9 +168,8 @@
       </div>
       <p>Spin the wheel, roll the dice, flip a coin — a simple way to make small everyday decisions.</p>
       <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.luckydecisions">Google Play</a>
-        <a href="https://apps.apple.com/app/id6762063499">App Store</a>
-        <a href="https://alexjkldev.github.io/luckydecisions/privacy-policy">Privacy Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.luckydecisions"><svg viewBox="0 0 28.99 31.99" aria-hidden="true"><path fill="#ea4335" d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z"/><path fill="#fbbc04" d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z"/><path fill="#4285f4" d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z"/><path fill="#34a853" d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"/></svg>Google Play</a>
+        <a href="https://apps.apple.com/app/id6762063499"><svg class="icon-apple" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.79-2.128.023-.065-.008-.104-.049-.148z"/></svg>App Store</a>
       </div>
     </div>
 
@@ -168,9 +180,8 @@
       </div>
       <p>A daily word-guessing game.</p>
       <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.guesstheword">Google Play</a>
-        <a href="https://apps.apple.com/app/id6760362638">App Store</a>
-        <a href="https://alexjkldev.github.io/whatstheword/privacy_policy">Privacy Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.guesstheword"><svg viewBox="0 0 28.99 31.99" aria-hidden="true"><path fill="#ea4335" d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z"/><path fill="#fbbc04" d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z"/><path fill="#4285f4" d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z"/><path fill="#34a853" d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"/></svg>Google Play</a>
+        <a href="https://apps.apple.com/app/id6760362638"><svg class="icon-apple" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.79-2.128.023-.065-.008-.104-.049-.148z"/></svg>App Store</a>
       </div>
     </div>
 
@@ -181,9 +192,8 @@
       </div>
       <p>Unlimited crosswords, every day.</p>
       <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.dailycrossword">Google Play</a>
-        <a href="https://apps.apple.com/app/id6761462440">App Store</a>
-        <a href="https://alexjkldev.github.io/dailycrossword/privacy_policy">Privacy Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.dailycrossword"><svg viewBox="0 0 28.99 31.99" aria-hidden="true"><path fill="#ea4335" d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z"/><path fill="#fbbc04" d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z"/><path fill="#4285f4" d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z"/><path fill="#34a853" d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"/></svg>Google Play</a>
+        <a href="https://apps.apple.com/app/id6761462440"><svg class="icon-apple" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.79-2.128.023-.065-.008-.104-.049-.148z"/></svg>App Store</a>
       </div>
     </div>
 
@@ -194,8 +204,7 @@
       </div>
       <p>A little flower-petal fortune-telling app.</p>
       <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.daisyfortune">Google Play</a>
-        <a href="https://alexjkldev.github.io/daisyfortune/privacy-policy">Privacy Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.daisyfortune"><svg viewBox="0 0 28.99 31.99" aria-hidden="true"><path fill="#ea4335" d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z"/><path fill="#fbbc04" d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z"/><path fill="#4285f4" d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z"/><path fill="#34a853" d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"/></svg>Google Play</a>
       </div>
     </div>
   </div>
