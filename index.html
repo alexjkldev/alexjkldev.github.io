@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex JKL — Indie Mobile Developer</title>
+<meta name="description" content="Indie mobile developer. Lucky Decisions, What's the Word, Crossword Daily, Daisy Fortune.">
+<style>
+  :root {
+    --bg: #fdf6ff;
+    --text: #201a2b;
+    --muted: #6b6178;
+    --card-bg: #ffffff;
+    --border: #ece1f7;
+    --shadow: 0 4px 16px rgba(90, 40, 150, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17121f;
+      --text: #f3eefa;
+      --muted: #b3a8c2;
+      --card-bg: #221c2e;
+      --border: #362a45;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .hero {
+    background: linear-gradient(120deg, #ff5fa2 0%, #7b5bff 45%, #34c9eb 100%);
+    padding: 72px 24px 56px;
+    text-align: center;
+    color: #fff;
+  }
+  .hero h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .hero p {
+    margin: 0;
+    font-size: 17px;
+    opacity: 0.92;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 48px;
+  }
+  h2.section {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .app {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--accent, #7b5bff);
+    transition: transform 0.15s ease;
+  }
+  .app:hover {
+    transform: translateY(-3px);
+  }
+  .app-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .app-head img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .app h3 {
+    margin: 0;
+    font-size: 17px;
+  }
+  .app p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 13px;
+  }
+  .links a {
+    color: var(--accent, #7b5bff);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .links a:hover {
+    text-decoration: underline;
+  }
+  .app.ld   { --accent: #ff5fa2; }
+  .app.wtw  { --accent: #3fb56f; }
+  .app.cd   { --accent: #3474e0; }
+  .app.daisy{ --accent: #f2b53c; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer a {
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Alex JKL</h1>
+  <p>Indie mobile developer</p>
+</div>
+
+<main>
+  <h2 class="section">Apps</h2>
+
+  <div class="grid">
+    <div class="app ld">
+      <div class="app-head">
+        <img src="assets/lucky-decisions.png" alt="Lucky Decisions icon">
+        <h3>Lucky Decisions</h3>
+      </div>
+      <p>Spin the wheel, roll the dice, flip a coin — a simple way to make small everyday decisions.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.luckydecisions">Google Play</a>
+        <a href="https://apps.apple.com/app/id6762063499">App Store</a>
+        <a href="https://alexjkldev.github.io/luckydecisions/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="app wtw">
+      <div class="app-head">
+        <img src="assets/whats-the-word.png" alt="What's the Word icon">
+        <h3>What's the Word</h3>
+      </div>
+      <p>A daily word-guessing game.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.guesstheword">Google Play</a>
+        <a href="https://apps.apple.com/app/id6760362638">App Store</a>
+        <a href="https://alexjkldev.github.io/whatstheword/privacy_policy">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="app cd">
+      <div class="app-head">
+        <img src="assets/crossword-daily.png" alt="Crossword Daily icon">
+        <h3>Crossword Daily</h3>
+      </div>
+      <p>Unlimited crosswords, every day.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.dailycrossword">Google Play</a>
+        <a href="https://apps.apple.com/app/id6761462440">App Store</a>
+        <a href="https://alexjkldev.github.io/dailycrossword/privacy_policy">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="app daisy">
+      <div class="app-head">
+        <img src="assets/daisy-fortune.png" alt="Daisy Fortune icon">
+        <h3>Daisy Fortune</h3>
+      </div>
+      <p>A little flower-petal fortune-telling app.</p>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.alexjkl.daisyfortune">Google Play</a>
+        <a href="https://alexjkldev.github.io/daisyfortune/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Contact: <a href="mailto:drams-remix2k@icloud.com">drams-remix2k@icloud.com</a>
+  </footer>
+</main>
+</body>
+</html>
