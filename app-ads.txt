@@ -1,3 +1,5 @@
+google.com, pub-9025201023678553, DIRECT, f08c47fec0942fa0
+pangleglobal.com, 5041830, DIRECT
 google.com, pub-1183334118965915, DIRECT, f08c47fec0942fa0
 e-planning.net, 2f3a04630ba9ba3f, RESELLER, c1ba615865ed87b2
 pubmatic.com, 165157, RESELLER, 5d62403b186f2ace
